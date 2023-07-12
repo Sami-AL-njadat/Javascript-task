@@ -15,23 +15,23 @@ rate_r  = window.prompt(" enter your average rate", "0-100");
  {
 alert( "FAIL")
  }
-else if (rate_r  >= 50 && rate_r <= 59){
+else if (rate_r <= 59){
     alert( "E")
 
 }
 
-else if ( rate_r  >= 60 && rate_r <= 69){
+else if ( rate_r <= 69){
     alert( "D")
 
 }
 
 
-else if ( rate_r  >= 70 && rate_r <= 79){
+else if ( rate_r <= 79){
     alert( "C")
 
 }
 
-else if ( rate_r  >= 80 && rate_r <= 89){
+else if ( rate_r <= 89){
     alert( "B")
 
 }

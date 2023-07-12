@@ -18,7 +18,6 @@ else if (q<w && w>e  && e<q)
 }
 
 
-
  /******* End Your Code ********* */
 
 /* 2. Write a JavaScript conditional statement to find the sign
