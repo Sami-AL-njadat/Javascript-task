@@ -15,7 +15,3 @@ head.addEventListener("mouseout" , function(){
 })
     
 
-    
-// }
-// console.log(head)
-// Can I help you!

@@ -1,0 +1,7 @@
+ { 
+ "Name":["abdaullah" ,"kundrah","ahmad","malek", "SAMI "] ,
+ "age" : [35 , 25 , 33 , 26 , 27] ,
+ "major": ["IT" , "engineer"  ,"math" , "chemistry" ,"accounting "],
+ "univercity":[" yarmouk"  ,  "yarmouk" , "just"  , " yarmouk " , "yarmouk"],
+ "image":["unix.png"] 
+}

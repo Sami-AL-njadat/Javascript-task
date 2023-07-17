@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    img {width: 100px;} ; 
+    th,td {padding: 50px;}
+    table{text-align: center; border: solid 1px black; border-radius: 4px;}
+
+    </style>
+</head>
+<body>
+    
+<button id="botn"  >load Data</button>
+
+<table  id="table" style="width:100% ; background-color: lightgrey;" >
+    <thead>
+      <th>Name</th>
+      <th> Age</th>
+      <th >Magir</th>
+      <th>univercity</th>
+      <th >Image</th>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+  
+  </table>
+
+
+<script>
+
+
+let tbody = document.getElementById("tbody");
+let botn = document.getElementById("botn");
+
+
+let data = new XMLHttpRequest();
+data.open("GET","task.json")
+botn.onclick = function(){
+    let input1= "  ";
+    const tabeeel =JSON.parse(data.responseText);
+    for (let i = 0; i<5; i++) {
+      input1 += `
+  <tr >
+   <td>${tabeeel.Name[i]}</td>
+   <td>${tabeeel.age[i]}</td>
+   <td>${tabeeel.major[i]} </td>
+   <td>${tabeeel.univercity[i]}</td>
+   <td>
+<img src="${tabeeel.image[0]}" >
+   </td>
+ </tr>
+ <br>`
+ 
+ 
+} 
+tbody.innerHTML=input1;
+
+}
+data.send();
+
+
+
+</script>
+
+</body>
+</html>
+
+ 
