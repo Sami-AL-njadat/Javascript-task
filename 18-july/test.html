@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    img {width: 100px;} ; 
+    th,td {padding: 50px;}
+    table{text-align: center; border: solid 1px black; border-radius: 4px;}
+
+    </style>
+</head>
+<body>
+    
+<button id="botn"  >load Data</button>
+
+<table  id="table" style="width:100% ; background-color: lightgrey;" >
+    <thead>
+      <th>anime</th>
+      <th> character</th>
+      <th >quote</th>
+      
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+  
+  </table>
+
+
+<script>
+
+
+let tbody = document.getElementById("tbody");
+let botn = document.getElementById("botn");
+
+
+let data = new XMLHttpRequest();
+data.open("GET","https://animechan.xyz/api/quotes/anime?title=naruto")
+botn.onclick = function(){
+    let input1= "  ";
+    const tabeeel =JSON.parse(data.responseText);
+    for (let i = 0; i<tabeeel.length; i++) {
+      input1 += `
+  <tr >
+   <td>${tabeeel[i].anime}</td>
+   <td>${tabeeel[i].character}</td>
+   <td>${tabeeel[i].quote} </td>
+   
+   <td>
+
+   </td>
+ </tr>
+ <br>`
+ 
+ 
+} 
+tbody.innerHTML=input1;
+
+}
+data.send();
+
+
+
+</script>
+
+</body>
+</html>
